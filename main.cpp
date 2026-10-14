@@ -23,12 +23,29 @@ std::string getNextWord(){
     return word;
 }
 
+void showTurn(const std::string& playerName, char requiredLetter){
+    std::cout << "\nХод игрока: " << playerName << "\n";
+    std::cout << "Введите слово на букву \'" << requiredLetter << "\': ";
+}
+
+void showError(const std::string& error){
+    std::cout << "Ошибка!!!!!!! " << error << "\n";
+}
+
+void showSuccess(const std::string& word) {
+    std::cout << "Слово '" << word << "' принято!\n";
+}
+
 int main() {
     showWelcome();
-    std::string firstWord = getFirstWord();
-    std::cout << "Вы введите первое слово" << firstWord << "\n\n";
-    std::cout << "Текущий игрок, введите слово:";
+    std::string startWord = getFirstWord();
+    std::cout << "Вы ввели стартовое слово: " << startWord << "\n\n";
+    std::cout << "Текущий игрок, введите слово: ";
     std::string playerWord = getNextWord();
-    std::cout << "Вы ввели слово" << playerWord << "\n";
+    std::cout << "Вы ввели: " << playerWord << "\n";
+    showTurn("Игрок 2", 'к');
+    std::string word = getNextWord();
+    showSuccess(word);
+    showError("Это слово уже было использовано!");
     return 0;
 }
