@@ -1,16 +1,16 @@
 #include "stat.h"
 
-void Statistics::addWord(const Word& word) {
+void Stat::addWord(const Word& word) {
     if (!word.isEmpty()) {
         char first = word.getFirstLetter();
-        m_letterCounts[first] = m_letterCounts[first] + 1;
+        m_lettersCount[first] = m_lettersCount[first] + 1;
     }
 }
 
-void Statistics::clear() {
-    m_letterCounts.clear();
+void Stat::clear() {
+    m_lettersCount.clear();
 }
 
-std::map<char, int> Statistics::getData() const {
-    return m_letterCounts;
+std::map<char, int> Stat::getData() const {
+    return m_lettersCount;
 }
