@@ -41,18 +41,17 @@ void showStatistics(Stat& stat){
     std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
 }
 
-
 int main() {
     setlocale(LC_ALL, "Russian");
 
     showWelcome();
 
-    std::set<std::string>> usedWords;
+    std::set<std::string> usedWords;
 
     Stat statistics;
 
     std::string input;
-    std::cout << "Игрок 1б введите стартовое слово: ";
+    std::cout << "Игрок 1 введите стартовое слово: ";
     std::cin >> input;
 
     Word currentWord(input);
