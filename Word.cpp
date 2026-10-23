@@ -15,18 +15,17 @@ Word::Word(const std::string& rawText) {
     normalize();
 }
 
-char Word::getFirtsLatter() const {
+char Word::getFirstLetter() const {
     if (m_text.empty()) return '\0';
     return m_text[0];
 }
 
-
-char Word::getLastLatter() const {
+char Word::getLastLetter() const {
     if (m_text.empty()) return '\0';
     return m_text[m_text.size()-1];
 }
 
-std::string Word::getText const {
+std::string Word::getText() const {
     return m_text;
 }
 
