@@ -5,7 +5,7 @@
 
 class Word {
 private:
-    std::string m_text();
+    std::string m_text;
     void normalize();
 public:
     Word();

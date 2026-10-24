@@ -1,5 +1,6 @@
 #include "Word.h"
 #include <cctype>
+#include <string>
 
 void Word::normalize() {
     for(int i=0; i<m_text.size(); i++) {
@@ -30,5 +31,5 @@ std::string Word::getText() const {
 }
 
 bool Word::isEmpty() const {
-    return m_text.empty();
+    return m_text == "";
 }
